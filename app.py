@@ -29,16 +29,16 @@ CORS(app)
 
 def pusherProductos():
     import pusher
-    
+
     pusher_client = pusher.Pusher(
-      app_id="2046005",
-      key="e57a8ad0a9dc2e83d9a2",
-      secret="8a116dd9600a3b04a3a0",
-      cluster="us2",
+      app_id='2047997',
+      key='df10faff88d6c42a31d5',
+      secret='b118a566855091118c88',
+      cluster='us2',
       ssl=True
     )
     
-    pusher_client.trigger("canalProductos", "eventoProductos", {"message": "Hola Mundo!"})
+    pusher_client.trigger('my-channel', 'my-event', {'message': 'hello world'})
     return make_response(jsonify({}))
 
 @app.route("/")
@@ -275,3 +275,4 @@ def eliminarProducto():
     con.close()
 
     return make_response(jsonify({}))
+
