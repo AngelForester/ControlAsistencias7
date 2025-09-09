@@ -150,7 +150,7 @@ app.controller("decoracionesCtrl", function ($scope, $http) {
     // Enable pusher logging - don't include this in production
     Pusher.logToConsole = true
 
-    var pusher = new Pusher("e57a8ad0a9dc2e83d9a2", {
+    var pusher = new Pusher("df10faff88d6c42a31d5", {
       cluster: "us2"
     })
 
@@ -191,3 +191,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     activeMenuOption(location.hash)
 })
+
